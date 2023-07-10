@@ -6,24 +6,24 @@
 <button>Search</button>
 <br>
 <br>
-<div *ngIf="mostrarResultado">
-    <div *ngIf="heroeEncontrado">
+<div *ngIf="Ver">
+    <div *ngIf="Encontrado">
         <div class="card mb-3 animated fadeIn" style="max-width: 400px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img [src]="heroeEncontrado.img" class="img-fluid rounded-start" alt="...">
+                    <img [src]="Encontrado.img" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">{{heroeEncontrado.nombre}}</h5>
-                        <p class="card-text">{{heroeEncontrado.bio}}</p>
+                        <h5 class="card-title">{{Encontrado.nombre}}</h5>
+                        <p class="card-text">{{Encontrado.bio}}</p>
                         <p class="card-text">
                             <small class="text-body-secondary">
-                                {{heroeEncontrado.aparicion}}
+                                {{Encontrado.aparicion}}
 
                             </small>
                         </p>
-                        <a (click)="verHeroe(heroes.indexOf(heroeEncontrado))" class="btn btn-primary">Ver más</a>
+                        <a (click)="verHeroe(heroes.indexOf(Encontrado))" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
 </div>
 <br>
 <br>
-<div *ngIf="!mostrarResultado">
+<div *ngIf="!Ver">
     <div class='col animated fadeIn fast' *ngFor="let heroe of heroes; let i = index">
         <div class="card mb-3" style="max-width: 400px;">
             <div class="row g-0">
