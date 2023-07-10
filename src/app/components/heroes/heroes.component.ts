@@ -16,8 +16,8 @@ export class HeroesComponent {
   }
 
 
-heroeEncontrado: Heroe | null = null;
-mostrarResultado: boolean = false;
+Encontrado: Heroe | null = null;
+Ver: boolean = false;
 
 buscarHeroes(event: Event) {
   const textoBusqueda = (event.target as HTMLInputElement).value;
@@ -28,8 +28,8 @@ buscarHeroes(event: Event) {
   );
 
   // Actualizar las variables de visibilidad
-  this.heroeEncontrado = heroe ? heroe : null;
-  this.mostrarResultado = this.heroeEncontrado !== null;
+  this.Encontrado = heroe ? heroe : null;
+  this.Ver = this.Encontrado !== null;
 }
 
 
